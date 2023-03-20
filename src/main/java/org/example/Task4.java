@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.*;
 
-public class Main {
+public class Task4 {
 
     private static ArrayList<String[]> dataBase;
     private static Scanner myScanner = new Scanner(System.in);
