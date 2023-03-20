@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Main {
 
-    private static ArrayList<String[]> dataBase;
-    private static Scanner myScanner = new Scanner(System.in);
+    public static ArrayList<String[]> dataBase;
+    public static Scanner myScanner = new Scanner(System.in);
 
-    private static LinkedList<Integer> idList;
+    public static LinkedList<Integer> idList;
 
     public static void main(String[] args) {
         getData();
@@ -30,7 +30,7 @@ public class Main {
         myScanner.close();
     }
 
-    private static void getData() {
+    public static void getData() {
         dataBase = new ArrayList<>();
         System.out.println("Введите данные в формате \"Фамилия Имя Отчество Возраст Пол\".\n" +
                 "Для завершения ввода, введите \"stop\".");
@@ -41,14 +41,14 @@ public class Main {
         }
     }
 
-    private static void setIdList() {
+    public static void setIdList() {
         idList = new LinkedList<>();
         for (int i = 0; i < dataBase.size(); i++) {
             idList.add(i, i);
         }
     }
 
-    private static void printInIdListOrder() {
+    public static void printInIdListOrder() {
         for (Integer id :
                 idList) {
             String[] record = dataBase.get(id);
@@ -57,7 +57,7 @@ public class Main {
         }
     }
 
-    private static void printSortedByGenderAndAge() {
+    public static void printSortedByGenderAndAge() {
         idList.sort(new Comparator<Integer>() { //  Сортировка по возрасту встроенными средствами
             @Override
             public int compare(Integer i1, Integer i2) {
