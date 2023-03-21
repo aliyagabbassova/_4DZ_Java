@@ -9,7 +9,7 @@ public class Main {
 
     public static LinkedList<Integer> idList;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         getData();
         setIdList();
 
@@ -65,10 +65,10 @@ public class Main {
             }
         });
         LinkedList<Integer> newIdList = new LinkedList<>(idList);
-        Iterator<Integer> idIter = idList.iterator();
+        Iterator<Integer> idItr = idList.iterator();
         Integer currentId;
         for (int i = 0; i < idList.size(); i++) {
-            currentId = idIter.next();
+            currentId = idItr.next();
             if (dataBase.get(currentId)[4].equals("М")) {
                 newIdList.remove(currentId);
                 newIdList.add(currentId);
